@@ -48,7 +48,7 @@ form button {
   align-items: center;
   padding: 1.6rem 0;
 
-  background: #42d3ff;
+  background: #29bbe8;
   border-radius: 0.6rem;
 
   cursor: pointer;
@@ -60,9 +60,9 @@ form button {
   line-height: 1.7rem;
   color: #121212;
 
-  transition: filter 0.3s;
+  transition: .25s;
 }
 
 form button:hover {
-  filter: brightness(1.1);
+  background: #59b8d5;
 }
