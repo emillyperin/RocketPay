@@ -7,9 +7,11 @@ const ccLogo = document.querySelector(".cc-logo span:nth-child(2) img")
 
 function setCardType(type) {
   const colors = {
-    visa: ["#436D99", "#2D57F2"],
+    visa: ["#c58119", "#2D57F2"],
     mastercard: ["#DF6F29", "#C69347"],
-    rocketseat: ["#0D6F5D", "#C3129C"],
+    amex: ["#3045b3", "#60a2d4"],
+    elo: ["#b53131", "#dfab2d"],
+    hipercard: ["#b53131", "#bc7676"],
     default: ["black", "gray"],
   }
 
@@ -58,6 +60,21 @@ const cardNumberPattern = {
       cardtype: "mastercard",
     },
     {
+      mask: '0000 0000 0000 00000',
+      regex: /^606282|^3841(?:[0|4|6]{1})0/,
+      cardtype: 'hipercard',
+    },
+    {
+      mask: '0000 0000 0000 00000',
+      regex: /^3[47][0-9]{13}/,
+      cardtype: 'amex',
+    },
+    {
+      mask: "0000 0000 0000 0000",
+      regex: /^4011(78|79)|^43(1274|8935)|^45(1416|7393|763(1|2))|^50(4175|6699|67[0-6][0-9]|677[0-8]|9[0-8][0-9]{2}|99[0-8][0-9]|999[0-9])|^627780|^63(6297|6368|6369)|^65(0(0(3([1-3]|[5-9])|4([0-9])|5[0-1])|4(0[5-9]|[1-3][0-9]|8[5-9]|9[0-9])|5([0-2][0-9]|3[0-8]|4[1-9]|[5-8][0-9]|9[0-8])|7(0[0-9]|1[0-8]|2[0-7])|9(0[1-9]|[1-6][0-9]|7[0-8]))|16(5[2-9]|[6-7][0-9])|50(0[0-9]|1[0-9]|2[1-9]|[3-4][0-9]|5[0-8]))/,
+      cardtype: "elo",
+    },
+    {
       mask: "0000 0000 0000 0000",
       cardtype: "default",
     },
@@ -86,7 +103,7 @@ const cardHolder = document.querySelector("#card-holder")
 cardHolder.addEventListener("input", () => {
   const ccHolder = document.querySelector(".cc-holder .value")
 
-  ccHolder.innerText = cardHolder.value.length === 0 ? "FULANO DA SILVA" : cardHolder.value
+  ccHolder.innerText = cardHolder.value.length === 0 ? "NOME DO TITULAR" : cardHolder.value
 })
 
 securityCodeMasked.on("accept", () => {
