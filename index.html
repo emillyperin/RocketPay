@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/a4e52bd790.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="app">
@@ -157,6 +158,24 @@
 
         <button id="add-card">ADICIONAR CARTÃO</button>
       </form>
+      <div id="final-modals">
+        <div class="modal-form success">
+          <div class="bg-modal">
+            <div class="result-modal">
+              <span style="color:#44c47d">Concluído</span>
+              <i class="fa-regular fa-circle-check" style="color:#44c47d"></i>
+            </div>
+            <div class="message-modal">
+                <span>Solicitação de cadastro concluída com sucesso! Em breve você recebrá o resultado da análise por e-mail.</span>
+            </div>
+            <div class="btn-close">
+              <a href="/">
+                <button type="button" class="btn btn-success m-0"> OK </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="/src/main.js"></script>
