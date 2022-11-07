@@ -1,0 +1,81 @@
+#final-modals {
+    visibility: hidden;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000007a;
+}
+
+.active #final-modals {
+    visibility:visible;
+}
+
+#final-modals .modal-form {
+    width: 30rem;
+    height: 20rem;
+    box-shadow: 0px 0px 5px 2px #6e6d6d;
+    background-color: #1c1c1ef7;
+    border-radius: 21px;
+    transform: translateY(-1000px);
+    z-index: -1;
+    visibility: hidden;
+    transition: .25s;
+}
+
+.active #final-modals .modal-form {
+    transform: translateY(0px);
+    z-index: 99;
+    visibility: visible;
+}
+
+#final-modals .bg-modal {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+#final-modals .result-modal i {
+    font-size: 24px;
+}
+
+#final-modals .result-modal {
+    display: flex;
+    align-items: center;
+}
+
+#final-modals .result-modal span {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+
+#final-modals .btn-close button {
+    cursor: pointer;
+    background-color: #29bbe8;
+    border: none;
+    width: 55px;
+    height: 35px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #121212;
+    border-radius: 7px;
+
+    transition: .25s;
+}
+
+#final-modals .btn-close button:hover {
+    background: #59b8d5;
+}
+
+
+@media (max-width: 768px) {}
